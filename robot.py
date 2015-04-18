@@ -12,7 +12,6 @@ def test(robot, power):
     """A function to test things in"""
     print("test")
     marker = find_flag(robot)
-    drive_to(robot, marker, power)
 
 test(R, 100)
 
