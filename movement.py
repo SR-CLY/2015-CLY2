@@ -50,7 +50,7 @@ def drive(robot, time, power=100):
 
 def turn(robot, angle, direction, power=100):
     """Turn the robot on the spot."""
-    duration = angle * (FULL_TURN/360)
+    duration = angle * (FULL_TURN/360) + 30
     duration = abs(duration)
     print(duration)
     if direction == RIGHT:
