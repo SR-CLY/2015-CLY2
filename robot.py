@@ -11,11 +11,7 @@ R = Robot()
 def test(robot, power):
     """A function to test things in"""
     print("test")
-    Marker = False
-    while not Marker:
-        marker = find_flag(robot)
-        if marker.info.marker_type == MARKER_ROBOT:
-            Marker = True
+    marker = find_flag(robot)
     drive_to(robot, marker, power)
         
 
