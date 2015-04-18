@@ -14,7 +14,7 @@ def test(robot, power):
     Marker = False
     while not Marker:
         marker = find_flag(robot)
-        if m.info.marker_type == MARKER_ROBOT:
+        if marker.info.marker_type == MARKER_ROBOT:
             Marker = True
     drive_to(robot, marker, power)
         
