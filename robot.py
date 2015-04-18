@@ -20,6 +20,6 @@ def stage_one(robot, power):
     release_marker(robot, power)
 
 
-test(R, 100)
+stage_one(R, 100)
 
 stop(R)
