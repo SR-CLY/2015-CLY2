@@ -68,8 +68,8 @@ def drive_to(robot, marker, power=100):
     distance = marker.centre.polar.length
     angle = marker.centre.polar.rot_y
     turn(robot, angle, LEFT, power)
-    while distance > 0.1:
-        set_motor_power(robot, power)
+    set_motor_power(robot, power)
+    sleep(2)
     brake(robot)
 
 
