@@ -11,7 +11,8 @@ R = Robot()
 def test(robot, power):
     """A function to test things in"""
     print("test")
-    marker = find_flag(robot)
+    while True:
+        marker = find_flag(robot)
 
 test(R, 100)
 
