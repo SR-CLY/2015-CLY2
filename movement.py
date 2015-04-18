@@ -1,6 +1,5 @@
 from sr.robot import *
 from time import sleep
-from math import radians
 
 """Contains functions for movement"""
 
@@ -12,6 +11,7 @@ TRACK = 4  # Width of wheel in mm
 SPEED = 580  # Speed in mm/s
 RIGHT_COMPENSATION = 0.944
 FULL_TURN = 1.975  # Seconds
+FULL_MOVE = 40 #cm in 1 seconds fully powered movement.
 
 LEFT = -1
 RIGHT = 1
@@ -51,8 +51,6 @@ def drive(robot, time, power=100):
 def turn(robot, angle, direction, power=100):
     """Turn the robot on the spot."""
     duration = angle * (FULL_TURN/360)
-    duration = abs(duration)
-    print(duration)
     if direction == RIGHT:
         set_motor_power(robot, power, 0)
         set_motor_power(robot, -power, 1)
@@ -68,8 +66,8 @@ def drive_to(robot, marker, power=100):
     distance = marker.centre.polar.length
     angle = marker.centre.polar.rot_y
     turn(robot, angle, LEFT, power)
-    sleep(3)
-    set_motor_power(robot, power)
+    while distance > 0.1:
+        set_motor_power(robot, power)
     brake(robot)
 
 
