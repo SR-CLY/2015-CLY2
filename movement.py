@@ -9,8 +9,8 @@ from time import sleep
 
 TRACK = 4  # Width of wheel in mm
 SPEED = 580  # Speed in mm/s
-RIGHT_COMPENSATION = 0.935
-FULL_TURN = 2.3  # Seconds
+RIGHT_COMPENSATION = 0.944
+FULL_TURN = 1.975  # Seconds
 
 LEFT = -1
 RIGHT = 1
