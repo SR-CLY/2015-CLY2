@@ -62,8 +62,8 @@ def turn(robot, angle, direction, power=100):
 
 def drive_to(robot, marker, power=100):
     """Drives to a specified marker"""
-    distance = marker.centre.polar.length
-    angle = marker.centre.polar.rot_y
+    distance = marker.polar.centre.length
+    angle = marker.polar.centre.rot_y
     turn(robot, angle, LEFT, power)
     while distance > 0.1:
         set_motor_power(robot, power)
