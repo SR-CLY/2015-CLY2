@@ -50,8 +50,7 @@ def drive(robot, time, power=100):
 
 def turn(robot, angle, direction, power=100):
     """Turn the robot on the spot."""
-    duration = angle * (FULL_TURN/360)
-    duration = abs(duration)
+    duration = radians(angle * (FULL_TURN/360))#
     print(duration)
     if direction == RIGHT:
         set_motor_power(robot, power, 0)
@@ -68,8 +67,8 @@ def drive_to(robot, marker, power=100):
     distance = marker.centre.polar.length
     angle = marker.centre.polar.rot_y
     turn(robot, angle, LEFT, power)
-    while distance > 0.1:
-        set_motor_power(robot, power)
+    sleep(3)
+    set_motor_power(robot, power)
     brake(robot)
 
 
