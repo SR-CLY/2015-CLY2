@@ -8,13 +8,17 @@ from vision import *
 R = Robot()
 
 
-def test(robot, power):
+def drive_to_marker(robot, power):
     """A function to test things in"""
-    print("test")
-    turn(robot, 180, 0, power)
-    #marker = find_flag(robot)
-    #drive_to(robot, marker, power)
-        
+    print("Drive to marker")
+    marker = find_flag(robot)
+    drive_to(robot, marker, power)
+
+def stage_one(robot, power):
+    drive_to_marker(robot, power)
+    drive(robot, 1, power)
+    release_marker(robot, power)
+
 
 test(R, 100)
 
