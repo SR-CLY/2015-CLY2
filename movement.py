@@ -12,6 +12,7 @@ SPEED = 580  # Speed in mm/s
 RIGHT_COMPENSATION = 0.944
 FULL_TURN = 1.975  # Seconds
 FULL_MOVE = 40 #cm in 1 seconds fully powered movement.
+CARPET_CONSTANT = 30
 
 LEFT = -1
 RIGHT = 1
@@ -50,7 +51,7 @@ def drive(robot, time, power=100):
 
 def turn(robot, angle, direction, power=100):
     """Turn the robot on the spot."""
-    duration = (angle + 30) * (FULL_TURN/360) # + 30 needs to chnage for material
+    duration = (angle + CARPET_CONSTANT) * (FULL_TURN/360) # + 30 needs to chnage for material
     duration = abs(duration)
     print(duration)
     if direction == RIGHT:
