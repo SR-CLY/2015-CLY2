@@ -11,7 +11,7 @@ R = Robot()
 def test(robot, power):
     """A function to test things in"""
     print("test")
-    turn(robot, 90, 0, power)
+    turn(robot, 180, 0, power)
     #marker = find_flag(robot)
     #drive_to(robot, marker, power)
         
