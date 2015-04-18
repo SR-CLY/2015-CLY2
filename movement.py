@@ -1,5 +1,6 @@
 from sr.robot import *
 from time import sleep
+from math import radians
 
 """Contains functions for movement"""
 
@@ -49,7 +50,7 @@ def drive(robot, time, power=100):
 
 def turn(robot, angle, direction, power=100):
     """Turn the robot on the spot."""
-    duration = angle * (FULL_TURN/360)
+    duration = radians(angle * (FULL_TURN/360))
     if direction == RIGHT:
         set_motor_power(robot, power, 0)
         set_motor_power(robot, -power, 1)
