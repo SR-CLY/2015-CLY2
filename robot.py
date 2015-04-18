@@ -10,7 +10,8 @@ R = Robot()
 def test(robot, power):
     """A function to test things in"""
     print("test")
-    drive(robot, 4, power)
+    marker = find_flag(robot)
+    drive_to(robot, marker, power)
 
 test(R, 100)
 
