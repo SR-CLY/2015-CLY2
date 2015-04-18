@@ -7,7 +7,7 @@ def find_flag(robot):
     """Returns first flag it sees"""
     markers = robot.see()
     for m in markers:
-        print("Marker is type {} and distance {}".format(m.info.marker_type, m.dist))
+        print("Marker is type {} and distance {} and rot {}".format(m.info.marker_type, m.dist, m.centre.polar.rot_y))
         if m.info.marker_type == MARKER_FLAG:
             return m
 
