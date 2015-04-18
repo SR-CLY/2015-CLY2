@@ -6,7 +6,7 @@ from sr.robot import *
 def find_flag(robot):
     """Returns first flag it sees"""
     Marker = False
-    while not marker:
+    while not Marker:
         markers = robot.see()
         for m in markers:
             print("Marker is type {} and distance {} and rot {}".format(m.info.marker_type, m.dist, m.centre.polar.rot_y))
