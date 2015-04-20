@@ -3,8 +3,6 @@ from movement import *
 from vision import *
 from position import *
 """Contains functions for strategy"""
-
-    update_position(robot, markers)    update_position(robot, markers)    update_position(robot, markers)    update_position(robot, markers)	
 	
 def drive_to_marker(robot, power):
     """A function to test things in"""
