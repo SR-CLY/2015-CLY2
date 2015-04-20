@@ -12,7 +12,7 @@ SPEED = 580  # Speed in mm/s
 RIGHT_COMPENSATION = 0.944
 FULL_TURN = 1.975  # Seconds
 FULL_MOVE = 40 #cm in 1 seconds fully powered movement.
-CARPET_CONSTANT = 30
+CARPET_CONSTANT = 30 # Varies with thickness of carpet/ type of surface
 
 LEFT = -1
 RIGHT = 1
@@ -51,8 +51,9 @@ def drive(robot, time, power=100):
 
 def turn(robot, angle, direction, power=100):
     """Turn the robot on the spot."""
-    duration = (angle + CARPET_CONSTANT) * (FULL_TURN/360) # + 30 needs to chnage for material
-    duration = abs(duration)
+    if angle >= CARPET_CONSTANT:
+        angle += CARPET_CONSTANT
+    duration = abs(angle * (FULL_TURN/360))
     print(duration)
     if direction == RIGHT:
         set_motor_power(robot, power, 0)
