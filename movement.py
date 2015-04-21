@@ -50,6 +50,7 @@ def drive(robot, time, power=100):
 
 
 def drive_distance(robot, distance, power=100):
+    """Drives forward to a specified distance"""
     duration = abs(distance/DISTANCE_TRAVELLED_SECOND)
     drive(robot, duration, power)
 
