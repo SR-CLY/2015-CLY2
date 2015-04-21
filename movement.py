@@ -11,7 +11,7 @@ TRACK = 4  # Width of wheel in mm
 SPEED = 580  # Speed in mm/s
 RIGHT_COMPENSATION = 0.944 # Multiplier used to counter the effects of the right motor being more powerful 
 FULL_TURN = 1.975  # Seconds
-CARPET_CONSTANT = 15 # Varies with thickness of carpet/ type of surface
+CARPET_CONSTANT = 10 # Varies with thickness of carpet/ type of surface
 DISTANCE_TRAVELLED_SECOND = 0.4 #Distance in metres travelled per second
 
 LEFT = -1
