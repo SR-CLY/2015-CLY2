@@ -54,11 +54,15 @@ def drive_distance(robot, distance, power=100):
     duration = abs(distance/DISTANCE_TRAVELLED_SECOND)
     drive(robot, duration, power)
 
-def turn(robot, angle, direction, power=100):
+def turn(robot, angle, power=100):
     """Turn the robot on the spot."""
+    direction = LEFT
     if angle >= CARPET_CONSTANT:
         angle += CARPET_CONSTANT
-    duration = abs(angle * (FULL_TURN/360))
+    duration = angle * (FULL_TURN/360)
+    if duration < 0:
+        direction == RIGHT
+    duration = abs(duration)
     print(duration)
     if direction == RIGHT:
         set_motor_power(robot, power, 0)
@@ -74,7 +78,7 @@ def drive_to(robot, marker, power=100):
     """Drives to a specified marker"""
     distance = marker.centre.polar.length
     angle = marker.centre.polar.rot_y
-    turn(robot, angle, LEFT, power)
+    turn(robot, angle, power)
     drive_distance(robot, distance, power)
 
 
