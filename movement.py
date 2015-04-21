@@ -13,6 +13,7 @@ RIGHT_COMPENSATION = 0.944
 FULL_TURN = 1.975  # Seconds
 FULL_MOVE = 40 #cm in 1 seconds fully powered movement.
 CARPET_CONSTANT = 30 # Varies with thickness of carpet/ type of surface
+DISTANCE_TRAVELLED_SECOND = 0.4 #Distance in metres travelled per second
 
 LEFT = -1
 RIGHT = 1
