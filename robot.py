@@ -12,7 +12,7 @@ def stage_one(robot, power):
     release_marker(robot, power)
 
 def test(robot, power):
-    stage_one(robot, power)
+    carpet_test(robot, power)
 
 test(R, 100)
 
