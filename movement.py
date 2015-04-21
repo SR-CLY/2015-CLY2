@@ -85,6 +85,7 @@ def drive_towards(robot, time, angle, power):
 
 
 def release_marker(robot, power):
+    """Releases a marker"""
     turn(robot, 180, power)
     drive(robot, 1, -power)
     turn(robot, 180, power)
