@@ -17,4 +17,3 @@ def update_position(robot, markers):
     best_marker = markers[0]
     for m in markers:
         rot_y = m.centre.polar.rot_y
-        if
