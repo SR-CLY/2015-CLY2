@@ -59,10 +59,7 @@ def turn(robot, angle, power=100):
     direction = LEFT
     if angle >= CARPET_CONSTANT:
         angle += CARPET_CONSTANT
-    duration = angle * (FULL_TURN/360)
-    if duration < 0:
-        direction == RIGHT
-    duration = abs(duration)
+    duration = abs(angle * (FULL_TURN/360))
     print(duration)
     if direction == RIGHT:
         set_motor_power(robot, power, 0)
