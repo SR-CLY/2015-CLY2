@@ -9,3 +9,7 @@ def drive_to_marker(robot, power):
     print("Drive to marker")
     marker = find_flag(robot)
     drive_to(robot, marker, power)
+    
+def carpet_test(robot, power):
+    turn(robot,90)
+    turn(robot,180)
