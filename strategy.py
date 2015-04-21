@@ -11,4 +11,6 @@ def drive_to_marker(robot, power):
     drive_to(robot, marker, power)
     
 def carpet_test(robot, power):
-    drive_distance(robot,1,power)
+    turn(robot, 90)
+    sleep(3)
+    turn(robot, 180)
