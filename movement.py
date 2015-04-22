@@ -81,6 +81,11 @@ def drive_to(robot, marker, power=100):
     turn(robot, angle, power)
     drive_distance(robot, distance, power)
 
+def drive_triangle(robot, marker, power=100):
+    """Drives to a sepcified marker using triangles"""
+    distance = marker.centre.polar.length
+    angle1 = 90 - marker.centre.polar.rot_y
+    
 
 def drive_towards(robot, time, angle, power):
     """Drives in a direction for specified time"""
