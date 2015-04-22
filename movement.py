@@ -56,7 +56,7 @@ def drive_distance(robot, distance, power=100):
 
 def turn(robot, angle, power=100):
     """Turn the robot on the spot."""
-    direction = LEFT
+    direction = RIGHT
     if angle >= CARPET_CONSTANT:
         angle += CARPET_CONSTANT
     duration = angle * (FULL_TURN/360)
