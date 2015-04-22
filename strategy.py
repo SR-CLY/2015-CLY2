@@ -12,4 +12,5 @@ def drive_to_marker(robot, power):
     
 def carpet_test(robot, power):
     turn(robot, 90)
+    sleep(2)
     drive(robot, 3, power)
