@@ -66,6 +66,7 @@ def turn(robot, angle, power=100):
     duration = abs(duration)
     print(duration)
     if direction == RIGHT:
+        print("RIGHT")
         set_motor_power(robot, power, 0)
         set_motor_power(robot, -power, 1)
     else:
