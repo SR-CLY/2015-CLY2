@@ -14,5 +14,5 @@ def stage_one(robot, power):
 def test(robot, power):
     carpet_test(robot, power)
 
-test(R, 100)
+stage_one(R, 100)
 
