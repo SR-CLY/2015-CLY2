@@ -88,7 +88,7 @@ def turn_old(robot, angle, direction, power=100):
     """Required for Logger class to work correctly"""
     if angle >= CARPET_CONSTANT:
         angle += CARPET_CONSTANT
-    duration = angle * (FULL_TURN/360)
+    duration = abs(angle * (FULL_TURN/360))
     if direction == RIGHT:
         print("RIGHT")
         set_motor_power(robot, power, 0)
