@@ -16,5 +16,5 @@ def stage_one(robot, log, power):
 def test(robot, log, power):
     stage_one(robot, log, power)
 
-test(R, 100)
+test(R, log, 100)
 
