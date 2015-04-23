@@ -13,6 +13,7 @@ def stage_one(robot, log, power):
     drive_to_marker(robot, log, power)
     drive(robot, log, 1, power)
     release_marker(robot, power)
+    print(log.retrace)
     
 def saftey_code(robot,log, power):
     """Hardcoded to drive first marker into wall"""
