@@ -18,4 +18,4 @@ class Logger():
     def retrace(self):
         self.list_reversed = self.list[::-1]
         self.list = []
-        return self.list
+        return self.list_reversed
