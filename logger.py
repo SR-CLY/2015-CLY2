@@ -9,7 +9,7 @@ class Logger():
 
     def turn(self, angle, direction, power):
         if direction == 1:
-            direction = 0
+            direction = -1
         else:
             direction = 1
         movement = (angle, direction, power)
