@@ -42,19 +42,26 @@ def brake(robot):
     stop(robot)
 
 
-def drive(robot, time, power=100):
+def drive(robot, log, time, power=100):
     """Drives forward for specified time"""
+    set_motor_power(robot, power)
+    sleep(time)
+    stop(robot)
+    log.move(time, power)
+
+def drive_old(robot, time, power=100):
     set_motor_power(robot, power)
     sleep(time)
     stop(robot)
 
 
-def drive_distance(robot, distance, power=100):
+def drive_distance(robot, log, distance, power=100):
     """Drives forward to a specified distance"""
     duration = abs(distance/DISTANCE_TRAVELLED_SECOND)
     drive(robot, duration, power)
+    log.move(time, power)
 
-def turn(robot, angle, power=100):
+def turn(robot, log, angle, power=100):
     """Turn the robot on the spot."""
     direction = RIGHT
     if angle >= CARPET_CONSTANT:
@@ -74,6 +81,7 @@ def turn(robot, angle, power=100):
         set_motor_power(robot, power, 1)
     sleep(duration)
     brake(robot)
+    log.turn(angle, direction, power)
     
     
 def turn_old(robot, angle, direction, power=100):
@@ -91,12 +99,12 @@ def turn_old(robot, angle, direction, power=100):
     sleep(duration)
     brake(robot)
     
-def drive_to(robot, marker, power=100):
+def drive_to(robot, log, marker, power=100):
     """Drives to a specified marker"""
     distance = marker.centre.polar.length
     angle = marker.centre.polar.rot_y
-    turn(robot, angle, power)
-    drive_distance(robot, distance, power)
+    turn(robot, log, angle, power)
+    drive_distance(robot, log, distance, power)
 
 def drive_triangle(robot, marker, power=100):
     """Drives to a sepcified marker using triangles"""
@@ -104,14 +112,14 @@ def drive_triangle(robot, marker, power=100):
     angle1 = 90 - marker.centre.polar.rot_y
     
 
-def drive_towards(robot, time, angle, power):
+def drive_towards(robot, log, time, angle, power):
     """Drives in a direction for specified time"""
-    turn(robot, angle, power)
-    drive(robot, time, power)
+    turn(robot, log, angle, power)
+    drive(robot, log, time, power)
 
 
 def release_marker(robot, power):
     """Releases a marker"""
-    turn(robot, 180, power)
-    drive(robot, 1, -power)
-    turn(robot, 180, power)
+    turn_old(robot, 180, 1, power)
+    drive_old(robot, 1, -power)
+    turn_old(robot, 180, 1, power)
