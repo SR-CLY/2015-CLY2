@@ -58,8 +58,8 @@ def drive_old(robot, time, power=100):
 def drive_distance(robot, log, distance, power=100):
     """Drives forward to a specified distance"""
     duration = abs(distance/DISTANCE_TRAVELLED_SECOND)
-    drive(robot, duration, power)
-    log.move(time, power)
+    drive(robot, log, duration, power)
+
 
 def turn(robot, log, angle, power=100):
     """Turn the robot on the spot."""
