@@ -10,7 +10,7 @@ R = Robot()
 
 def stage_one(robot, log, power):
     drive_to_marker(robot, log, power)
-    drive(robot, 1, power)
+    drive(robot, log, 1, power)
     release_marker(robot, power)
 
 def test(robot, log, power):
