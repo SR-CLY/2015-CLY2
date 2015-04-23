@@ -12,7 +12,7 @@ SPEED = 580  # Speed in mm/s
 RIGHT_COMPENSATION = 0.98 # Multiplier used to counter the effects of the right motor being more powerful 
 FULL_TURN = 1.975  # Seconds
 CARPET_CONSTANT = -20 # Varies with thickness of carpet/ type of surface
-DISTANCE_TRAVELLED_SECOND = 0.4 #Distance in metres travelled per second
+DISTANCE_TRAVELED_SECOND = 0.4 #Distance in metres traveled per second
 
 LEFT = -1
 RIGHT = 1
@@ -57,7 +57,7 @@ def drive_old(robot, time, power=100):
 
 def drive_distance(robot, log, distance, power=100):
     """Drives forward to a specified distance"""
-    duration = abs(distance/DISTANCE_TRAVELLED_SECOND)
+    duration = abs(distance/DISTANCE_TRAVELED_SECOND)
     drive(robot, log, duration, power)
 
 
