@@ -2,27 +2,25 @@ from sr.robot import *
 from movement import *
 from vision import *
 from position import *
-from logger import *
 
-log = Logger()
 """Contains functions for strategy"""
 	
-def drive_to_marker(robot, power):
+def drive_to_marker(robot, log, power):
     """A function to test things in"""
     print("Drive to marker")
     marker = find_flag(robot)
-    drive_to(robot, marker, power)
+    drive_to(robot, log, marker, power)
     
-def carpet_test(robot, power):
-    drive(robot, 4, power)
+def carpet_test(robot, log, power):
+    drive(robot, log, 4, power)
     sleep(1)
-    turn(robot, 90)
+    turn(robot, log, 90)
     
-def drive_into_barrier(robot, power):
-    turn(robot, 45)
-    drive(robot, 5, power)
+def drive_into_barrier(robot, log, power):
+    turn(robot, log, 45)
+    drive(robot, log, 5, power)
     
-def retrace(robot, power):
+def retrace(robot, log, power):
     actions = log.retrace()
     for action in actions:
         try:
