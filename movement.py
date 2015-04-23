@@ -46,13 +46,13 @@ def drive(robot, log, time, power=100):
     """Drives forward for specified time"""
     set_motor_power(robot, power)
     sleep(time)
-    stop(robot)
+    brake(robot)
     log.move(time, power)
 
 def drive_old(robot, time, power=100):
     set_motor_power(robot, power)
     sleep(time)
-    stop(robot)
+    brake(robot)
 
 
 def drive_distance(robot, log, distance, power=100):
