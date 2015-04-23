@@ -73,7 +73,7 @@ def turn(robot, angle, power=100):
         set_motor_power(robot, -power, 0)
         set_motor_power(robot, power, 1)
     sleep(duration)
-    set_motor_power(robot, 0)
+    brake(robot)
 
 
 def drive_to(robot, marker, power=100):
