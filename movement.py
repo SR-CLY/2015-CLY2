@@ -74,8 +74,23 @@ def turn(robot, angle, power=100):
         set_motor_power(robot, power, 1)
     sleep(duration)
     brake(robot)
-
-
+    
+    
+def turn_old(robot, angle, direction, power=100):
+    """Required for Logger class to work correctly"""
+    if angle >= CARPET_CONSTANT:
+        angle += CARPET_CONSTANT
+    duration = angle * (FULL_TURN/360)
+    if direction == RIGHT:
+        print("RIGHT")
+        set_motor_power(robot, power, 0)
+        set_motor_power(robot, -power, 1)
+    else:
+        set_motor_power(robot, -power, 0)
+        set_motor_power(robot, power, 1)
+    sleep(duration)
+    brake(robot)
+    
 def drive_to(robot, marker, power=100):
     """Drives to a specified marker"""
     distance = marker.centre.polar.length
