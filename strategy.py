@@ -11,6 +11,10 @@ def drive_to_marker(robot, power):
     drive_to(robot, marker, power)
     
 def carpet_test(robot, power):
-    drive(robot, 3, power)
+    drive(robot, 4, power)
     sleep(1)
     turn(robot, 90)
+    
+def drive_into_barrier(robot, power):
+    turn(robot, 45)
+    drive(robot, 5, power)
