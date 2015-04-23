@@ -26,6 +26,6 @@ def retrace(robot, power):
     actions = log.retrace()
     for action in actions:
         try:
-            turn(action[0],action[1],action[2])
+            turn_old(robot,action[0],action[1],action[2])
         except IndexError:
-            move(action[0],action[1])
+            drive(action[0],action[1])
