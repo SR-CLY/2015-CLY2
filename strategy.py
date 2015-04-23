@@ -26,4 +26,4 @@ def retrace(robot, log, power):
         try:
             turn_old(robot,action[0],action[1],action[2])
         except IndexError:
-            drive(action[0],action[1])
+            drive_old(action[0],action[1])
