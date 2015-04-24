@@ -6,7 +6,7 @@ from position import *
 """Contains functions for strategy"""
 	
 def drive_to_marker(robot, log, power):
-    """A function to test things in"""
+    """Drives to nearest marker"""
     print("Drive to marker")
     marker = find_flag(robot)
     drive_to(robot, log, marker, power)
