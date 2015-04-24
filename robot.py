@@ -23,9 +23,7 @@ def saftey_code(robot,log, power):
 
 def test(robot, log, power):
     """A test function"""
-    turn(robot, log, 360, power)
-    sleep(0.5)
-    drive(robot,log, 4, power)
+    saftey_code(robot, log, power)
 
 test(R, log, 100)
 
