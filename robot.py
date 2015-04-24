@@ -23,7 +23,7 @@ def saftey_code(robot,log, power):
 
 def test(robot, log, power):
     """A test function"""
-    saftey_code(robot, log, power)
+    turn(robot, log, 45, power)
 
 test(R, log, 100)
 
