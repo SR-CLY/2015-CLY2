@@ -38,7 +38,6 @@ def brake(robot):
     """Sets the motors power negative before stopping"""
     robot.motors[0].m0.power = -(robot.motors[0].m0.power)
     robot.motors[0].m1.power = -(robot.motors[0].m1.power)
-    sleep(0.1)
     stop(robot)
 
 
