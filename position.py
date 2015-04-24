@@ -5,7 +5,7 @@ INITIAL_Y = 0
 INITIAL_BEARING = 0
 
 
-class Position:
+class Position():
     def __init__(self, x=INITIAL_X, y=INITIAL_Y, b=INITIAL_BEARING):
         self.x = x
         self.y = y
