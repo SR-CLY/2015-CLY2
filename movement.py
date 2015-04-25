@@ -9,7 +9,7 @@ from time import sleep
 
 TRACK = 4  # Width of wheel in mm
 SPEED = 580  # Speed in mm/s
-RIGHT_COMPENSATION = 0.975 # Multiplier used to counter the effects of the right motor being more powerful 
+RIGHT_COMPENSATION = 0.978 # Multiplier used to counter the effects of the right motor being more powerful 
 FULL_TURN = 1.885  # Seconds
 CARPET_CONSTANT = 0# Varies with thickness of carpet/ type of surface
 DISTANCE_TRAVELED_SECOND = 0.4 #Distance in metres traveled per second
