@@ -88,7 +88,7 @@ def turn_old(robot, angle, direction, power=50):
     if angle >= CARPET_CONSTANT:
         angle += CARPET_CONSTANT
     
-    duration = abs((angle*2) * ((FULL_TURN/2)/360))
+    duration = abs((angle*4) * ((FULL_TURN/2)/360))
     if direction == RIGHT:
         print("RIGHT")
         set_motor_power(robot, power, 0)
