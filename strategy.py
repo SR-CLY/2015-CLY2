@@ -74,7 +74,54 @@ def wander(robot, log, power):
     retrace(robot, log, power)
     print("Steps Retraced, Program Terminating")
     
-    
+def WanderLoop(robot, log, power):
+    '''Drives into zone to the right'''
+    drive(robot, log, 2, -100)
+    sleep(1)
+    turn(robot, log, 90, 100)
+    sleep(1)
+    drive(robot, log, 2.25, 100)
+    sleep(1)
+    turn(robot, log, -85, 100)
+    sleep(1)
+    drive(robot, log, 4, power)
+    sleep(1)
+    Marker = False
+    state = 1
+    while not Marker:
+        m = try_find_flag(robot)
+        try:
+            if m.info.marker_type == MARKER_FLAG:
+                Marker = True
+                print("Marker Seen")   
+        except:
+            if state == 1:
+                drive(robot, log, 1, power)
+                print("No Marker Seen")
+                state = 2
+            elif state == 2:
+                turn(robot, log, 90, power)
+                print("No Marker Seen")
+                state = 3
+            elif state == 3:
+                turn(robot, log, 90, power)
+                print("No Marker Seen")
+                state = 4
+            elif state == 4:
+                turn(robot, log, 90, power)
+                print("No Marker Seen")
+                state = 5
+            elif state == 5:
+                turn(robot, log, 90, power)
+                print("No Marker Seen")
+                state = 1
+            sleep(1)
+    drive_to_marker(robot, log, power)
+    turn_old(robot, 180, 1,  power)
+    retrace(robot, log, power)
+    print("Program Terminating")
+
+
 def carpet_test(robot, log, power):
     drive(robot, log, 4, power)
     sleep(1)
@@ -91,3 +138,9 @@ def retrace(robot, log, power):
             turn_old(robot,action[0],action[1],action[2])
         except IndexError:
             drive_old(robot, action[0],action[1])
+            
+            
+            
+            
+            
+            
