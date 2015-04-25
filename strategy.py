@@ -30,7 +30,7 @@ def wander(robot, log, power):
     turn(robot, log, -90, 100)
     sleep(1)
     print("Turn Completed")
-    drive(robot, log, 1, power)
+    drive(robot, log, 4, power)
     sleep(1)
     Marker = False
     print("Starting Loop")
