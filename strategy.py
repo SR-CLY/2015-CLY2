@@ -74,7 +74,7 @@ def wander(robot, log, power):
     retrace(robot, log, power)
     print("Steps Retraced, Program Terminating")
     
-def WanderLoop(robot, log, power):
+def wander_loop(robot, log, power):
     '''Drives into zone to the right'''
     drive(robot, log, 2, -100)
     sleep(1)
