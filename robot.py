@@ -28,7 +28,7 @@ def two_flag_code(robot, log, power):
 
 def test(robot, log, power):
     """A test function"""
-    two_flag_code(robot, log, power)
+    turn_old(robot, 180, 1, (power/2))
 
 test(R, log, 100)
 
