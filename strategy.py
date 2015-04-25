@@ -14,9 +14,9 @@ def drive_to_marker(robot, log, power):
 def wander(robot, log, power):
     '''Drives into zone to the right'''
     print("Running wander()")
-    print("Driving Forward")
+    print("Driving backward")
     drive(robot, log, 2, -100)
-    print("Has Driven Forward")
+    print("Has Driven backward")
     print("Turning")
     turn(robot, log, 90, 100)
     print("Turn Completed")
