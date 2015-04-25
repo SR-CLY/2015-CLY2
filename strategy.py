@@ -33,9 +33,26 @@ def wander(robot, log, power):
         if m.info.marker_type == MARKER_FLAG:
             Marker = True
             print "Marker Seen"
-        else:
-            drive(robot, log, 1, 100)
+        elif state == 1:
+            drive(robot, log, 1, power)
+            print "No Marker Seen"#
+            state = 2
+        elif state == 2:
+            turn(robot, log, 90, power)
             print "No Marker Seen"
+            state = 3
+        elif state == 3:
+            turn(robot, log, 90, power)
+            print "No Marker Seen"
+            state = 4
+        elif state == 4:
+            turn(robot, log, 90, power)
+            print "No Marker Seen"
+            state = 5
+        elif state == 5:
+            turn(robot, log, 90, power)
+            print "No Marker Seen"
+            state = 1
     print "Finished Loop"
     print "Driving to Marker"
     drive_to_marker(robot, log, power)
