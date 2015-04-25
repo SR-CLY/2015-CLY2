@@ -85,6 +85,7 @@ def turn(robot, log, angle, power=100):
     
 def turn_old(robot, angle, direction, power=50):
     """Required for Logger class to work correctly"""
+    power = 50
     if angle >= CARPET_CONSTANT:
         angle += CARPET_CONSTANT
     
