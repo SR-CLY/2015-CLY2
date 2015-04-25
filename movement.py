@@ -58,6 +58,11 @@ def drive_distance(robot, log, distance, power=100):
     """Drives forward to a specified distance"""
     duration = abs(distance/DISTANCE_TRAVELED_SECOND)
     drive(robot, log, duration, power)
+    
+def half_drive_distance(robot, log, distance, power=100):
+    """Drives forward to a specified distance"""
+    duration = abs((distance/2)/DISTANCE_TRAVELED_SECOND)
+    drive(robot, log, duration, power)
 
 
 def turn(robot, log, angle, power=100):
@@ -101,6 +106,13 @@ def turn_old(robot, angle, direction, power=50):
     brake(robot)
     
 def drive_to(robot, log, marker, power=100):
+    """Drives to a specified marker"""
+    distance = marker.centre.polar.length
+    angle = marker.centre.polar.rot_y
+    turn(robot, log, angle, power)
+    drive_distance(robot, log, distance, power)
+    
+def half_drive_to(robot, log, marker, power=100):
     """Drives to a specified marker"""
     distance = marker.centre.polar.length
     angle = marker.centre.polar.rot_y
