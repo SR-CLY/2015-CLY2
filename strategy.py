@@ -14,51 +14,51 @@ def drive_to_marker(robot, log, power):
 def wander(robot, log, power):
     '''Drives into zone to the right'''
     print("Running wander()")
-    print"Driving Forward"
+    print("Driving Forward")
     drive(robot, log, 2, -100)
-    print "Has Driven Forward"
-    print "Turning"
+    print("Has Driven Forward")
+    print("Turning")
     turn(robot, log, 90, 100)
-    print "Turn Completed"
-    print "Driving Forward"
+    print("Turn Completed")
+    print("Driving Forward")
     drive(robot, log, 3, 100)
-    print "Has Driven Forward"
-    print "Turning"
+    print("Has Driven Forward")
+    print("Turning")
     turn(robot, log, -45, 100)
-    print "Turn Completed"
+    print("Turn Completed")
     Marker = False
-    print "Starting Loop"
+    print("Starting Loop")
     state = 1
     while not Marker:
         m = try_find_flag(robot)
         if m.info.marker_type == MARKER_FLAG:
             Marker = True
-            print "Marker Seen"
+            print("Marker Seen")
         elif state == 1:
             drive(robot, log, 1, power)
-            print "No Marker Seen"#
+            print("No Marker Seen")
             state = 2
         elif state == 2:
             turn(robot, log, 90, power)
-            print "No Marker Seen"
+            print("No Marker Seen")
             state = 3
         elif state == 3:
             turn(robot, log, 90, power)
-            print "No Marker Seen"
+            print("No Marker Seen")
             state = 4
         elif state == 4:
             turn(robot, log, 90, power)
-            print "No Marker Seen"
+            print("No Marker Seen")
             state = 5
         elif state == 5:
             turn(robot, log, 90, power)
-            print "No Marker Seen"
+            print("No Marker Seen)"
             state = 1
-    print "Finished Loop"
-    print "Driving to Marker"
+    print("Finished Loop")
+    print("Driving to Marker")
     drive_to_marker(robot, log, power)
-    print "Driven to Marker"
-    print "Retracing Steps"
+    print("Driven to Marker")
+    print("Retracing Steps")
     retrace(robot, log, power)
     print("Steps Retraced, Program Terminating")
     
