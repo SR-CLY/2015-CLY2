@@ -36,7 +36,7 @@ def two_flag_code(robot, log, power):
 
 def test(robot, log, power):
     """A test function"""
-    stage_one(robot, log, power)
+    drive_old(robot, 1, power)
 
 two_flag_code(R, log, 100)
 
