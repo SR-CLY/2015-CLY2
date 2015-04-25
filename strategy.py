@@ -42,7 +42,7 @@ def wander(robot, log, power):
     print "Driven to Marker"
     print "Retracing Steps"
     retrace(robot, log, power)
-    "Steps Retraced, Program Terminating"
+    print("Steps Retraced, Program Terminating")
     
     
 def carpet_test(robot, log, power):
