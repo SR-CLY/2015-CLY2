@@ -10,9 +10,12 @@ R = Robot()
 
 def stage_one(robot, log, power):
     """Moves forward to first marker, pushes into zone and then releases it"""
-    drive_to_marker(robot, log, power)
     drive(robot, log, 1, power)
     release_marker(robot, power)
+    drive(robot, log, 2, power)
+    drive_to_marker(robot, log, power)
+    turn_old(robot, 180, 1, power)
+    drive(robot, log, 2, power)
     print(log.retrace)
     
 def saftey_code(robot,log, power):
