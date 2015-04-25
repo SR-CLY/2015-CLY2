@@ -20,7 +20,7 @@ def stage_one(robot, log, power):
     sleep(0.1)
     turn_old(robot, 180, 1, power)
     sleep(0.1)
-    drive(robot, log, 2, power)
+    drive(robot, log, 3, power)
     print(log.retrace)
     
 def saftey_code(robot,log, power):
@@ -37,6 +37,7 @@ def two_flag_code(robot, log, power):
 def test(robot, log, power):
     """A test function"""
     stage_one(robot, log, power)
+
 
 two_flag_code(R, log, 100)
 
