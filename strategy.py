@@ -44,8 +44,7 @@ def wander(robot, log, power):
     retrace(robot, log, power)
     "Steps Retraced, Program Terminating"
     
-
-
+    
 def carpet_test(robot, log, power):
     drive(robot, log, 4, power)
     sleep(1)
