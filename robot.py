@@ -23,14 +23,12 @@ def saftey_code(robot,log, power):
 
 def two_flag_code(robot, log, power):
     '''Safety_Code() and then Wander()'''
-    drive_distance(robot, log, 2, power)
-    turn(robot, log, 45, power)
-    drive(robot,log, 3, power)
+    saftey_code(robot,log,power)
     wander(robot, log, power)
 
 def test(robot, log, power):
     """A test function"""
     two_flag_code(robot, log, power)
 
-test(R, log, 100)
+saftey_code(R, log, 100)
 
