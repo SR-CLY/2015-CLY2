@@ -13,8 +13,8 @@ def drive_to_marker(robot, log, power):
 
 def wander(robot, log, power):
     '''Drives into zone to the right'''
-    drive(robot, log, 3, -100)
-    turn(robot, log, 45, 100)
+    drive(robot, log, 2, -100)
+    turn(robot, log, 90, 100)
     drive(robot, log, 3, 100)
     turn(robot, log, -45, 100)
     Marker = False
