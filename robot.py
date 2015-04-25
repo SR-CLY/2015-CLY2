@@ -38,5 +38,5 @@ def test(robot, log, power):
     """A test function"""
     stage_one(robot, log, power)
 
-test(R, log, 100)
+two_flag_ code(R, log, 100)
 
