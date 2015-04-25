@@ -10,7 +10,7 @@ R = Robot()
 
 def stage_one(robot, log, power):
     """Moves forward to first marker, pushes into zone and then releases it"""
-    drive(robot, log, 1, power)
+    drive(robot, log, 3, power)
     sleep(0.1)
     release_marker(robot, power)
     sleep(0.1)
@@ -33,11 +33,6 @@ def two_flag_code(robot, log, power):
     '''Safety_Code() and then Wander()'''
     saftey_code(robot,log,power)
     wander(robot, log, power)
-    
-    
-def three_flag_code(robot, log, power):
-    saftey_code(robot, log, power)
-    WanderLoop(robot, log, power)
 
 def test(robot, log, power):
     """A test function"""
