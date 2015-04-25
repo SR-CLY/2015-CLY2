@@ -39,5 +39,5 @@ def test(robot, log, power):
     stage_one(robot, log, power)
 
 
-two_flag_code(R, log, 100)
+stage_one(R, log, 100)
 
