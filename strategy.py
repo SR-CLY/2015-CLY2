@@ -52,7 +52,7 @@ def wander(robot, log, power):
             state = 5
         elif state == 5:
             turn(robot, log, 90, power)
-            print("No Marker Seen)"
+            print("No Marker Seen")
             state = 1
     print("Finished Loop")
     print("Driving to Marker")
