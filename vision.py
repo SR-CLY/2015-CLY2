@@ -15,7 +15,7 @@ def find_flag(robot):
                 Marker = True
                 
 def try_find_flag(robot):
-    """Returns first flag it sees"""
+    """Tries to return a flag marker"""
     markers = robot.see()
     for m in markers:
         print("Marker is type {} and distance {} and rot {}".format(m.info.marker_type, m.dist, m.centre.polar.rot_y))
