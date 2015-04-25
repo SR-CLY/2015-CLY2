@@ -36,7 +36,7 @@ def two_flag_code(robot, log, power):
 
 def test(robot, log, power):
     """A test function"""
-    drive_old(robot, 1, power)
+    drive_distance(robot, log, 1, power)
 
 test(R, log, 100)
 
