@@ -17,9 +17,9 @@ def stage_one(robot, log, power):
     
 def saftey_code(robot,log, power):
     """Hardcoded to drive first marker into wall"""
-    drive_distance(robot, log, 2, power)
+    drive_distance(robot, log, 1, power)
     turn(robot, log, 45, power)
-    drive(robot,log, 3, power)
+    drive(robot,log, 4, power)
 
 def two_flag_code(robot, log, power):
     '''Safety_Code() and then Wander()'''
