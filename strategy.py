@@ -21,7 +21,7 @@ def wander(robot, log, power):
     turn(robot, log, 90, 100)
     print("Turn Completed")
     print("Driving Forward")
-    drive(robot, log, 2, 100)
+    drive(robot, log, 2.5, 100)
     print("Has Driven Forward")
     print("Turning")
     turn(robot, log, -90, 100)
