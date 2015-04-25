@@ -31,33 +31,38 @@ def wander(robot, log, power):
     state = 1
     while not Marker:
         m = try_find_flag(robot)
-        if m.info.marker_type == MARKER_FLAG:
-            Marker = True
-            print("Marker Seen")
-        elif state == 1:
-            drive(robot, log, 1, power)
-            print("No Marker Seen")
-            state = 2
-        elif state == 2:
-            turn(robot, log, 90, power)
-            print("No Marker Seen")
-            state = 3
-        elif state == 3:
-            turn(robot, log, 90, power)
-            print("No Marker Seen")
-            state = 4
-        elif state == 4:
-            turn(robot, log, 90, power)
-            print("No Marker Seen")
-            state = 5
-        elif state == 5:
-            turn(robot, log, 90, power)
-            print("No Marker Seen")
-            state = 1
-    print("Finished Loop")
+        try:
+            if m.info.marker_type == MARKER_FLAG:
+                Marker = True
+                print("Marker Seen")   
+        except:
+            if state == 1:
+                drive(robot, log, 1, power)
+                print("No Marker Seen")
+                state = 2
+            elif state == 2:
+                turn(robot, log, 90, power)
+                print("No Marker Seen")
+                state = 3
+            elif state == 3:
+                turn(robot, log, 90, power)
+                print("No Marker Seen")
+                state = 4
+            elif state == 4:
+                turn(robot, log, 90, power)
+                print("No Marker Seen")
+                state = 5
+            elif state == 5:
+                turn(robot, log, 90, power)
+                print("No Marker Seen")
+                state = 1
+        print("Finished Loop 2")
     print("Driving to Marker")
     drive_to_marker(robot, log, power)
     print("Driven to Marker")
+    print("Turning 180")
+    turn(robot, log, 180,  power)
+    print("Turned")
     print("Retracing Steps")
     retrace(robot, log, power)
     print("Steps Retraced, Program Terminating")
