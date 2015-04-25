@@ -38,5 +38,5 @@ def test(robot, log, power):
     """A test function"""
     drive_old(robot, 1, power)
 
-two_flag_code(R, log, 100)
+test(R, log, 100)
 
