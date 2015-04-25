@@ -21,10 +21,10 @@ def wander(robot, log, power):
     turn(robot, log, 90, 100)
     print("Turn Completed")
     print("Driving Forward")
-    drive(robot, log, 3, 100)
+    drive(robot, log, 2, 100)
     print("Has Driven Forward")
     print("Turning")
-    turn(robot, log, -45, 100)
+    turn(robot, log, -90, 100)
     print("Turn Completed")
     Marker = False
     print("Starting Loop")
