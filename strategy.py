@@ -28,6 +28,7 @@ def wander(robot, log, power):
     print "Turn Completed"
     Marker = False
     print "Starting Loop"
+    state = 1
     while not Marker:
         m = try_find_flag(robot)
         if m.info.marker_type == MARKER_FLAG:
