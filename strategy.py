@@ -10,6 +10,11 @@ def drive_to_marker(robot, log, power):
     print("Drive to marker")
     marker = find_flag(robot)
     drive_to(robot, log, marker, power)
+    
+def half_drive_to_marker(robot, log, power):
+    marker = find_flag(robot)
+    half_drive_to(robot, log, marker, power)
+    
 
 def wander(robot, log, power):
     '''Drives into zone to the right'''
