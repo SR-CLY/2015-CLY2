@@ -30,5 +30,5 @@ def test(robot, log, power):
     """A test function"""
     two_flag_code(robot, log, power)
 
-saftey_code(R, log, 100)
+test(R, log, 100)
 
