@@ -13,19 +13,36 @@ def drive_to_marker(robot, log, power):
 
 def wander(robot, log, power):
     '''Drives into zone to the right'''
+    print "Running wander()"
+    print "Driving Forward"
     drive(robot, log, 2, -100)
+    print "Has Driven Forward"
+    print "Turning"
     turn(robot, log, 90, 100)
+    print "Turn Completed"
+    print "Driving Forward"
     drive(robot, log, 3, 100)
+    print "Has Driven Forward"
+    print "Turning"
     turn(robot, log, -45, 100)
+    print "Turn Completed"
     Marker = False
+    print "Starting Loop"
     while not Marker:
         m = try_find_flag(robot)
-        if m.info.marker_type != MARKER_FLAG:
-            drive(robot, log, 1, 100)
-        else:
+        if m.info.marker_type == MARKER_FLAG:
             Marker = True
+            print "Marker Seen"
+        else:
+            drive(robot, log, 1, 100)
+            print "No Marker Seen"
+    print "Finished Loop"
+    print "Driving to Marker"
     drive_to_marker(robot, log, power)
+    print "Driven to Marker"
+    print "Retracing Steps"
     retrace(robot, log, power)
+    "Steps Retraced, Program Terminating"
     
 
 
