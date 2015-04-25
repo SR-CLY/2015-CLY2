@@ -56,6 +56,7 @@ def wander(robot, log, power):
                 turn(robot, log, 90, power)
                 print("No Marker Seen")
                 state = 1
+            sleep(1)
         print("Finished Loop 2")
     print("Driving to Marker")
     drive_to_marker(robot, log, power)
