@@ -138,9 +138,8 @@ def retrace(robot, log, power):
             turn_old(robot,action[0],action[1],action[2])
         except IndexError:
             drive_old(robot, action[0],action[1])
-            
-            
-            
-            
-            
-            
+
+
+
+
+
