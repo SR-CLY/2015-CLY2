@@ -122,5 +122,8 @@ def drive_towards(robot, log, time, angle, power):
 def release_marker(robot, power):
     """Releases a marker"""
     turn_old(robot, 180, 1, power)
+    sleep(0.2)
     drive_old(robot, 1, -power)
+    sleep(0.2)
     turn_old(robot, 180, 1, power)
+    sleep(0.2)
