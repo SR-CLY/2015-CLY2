@@ -62,7 +62,7 @@ def wander(robot, log, power):
     drive_to_marker(robot, log, power)
     print("Driven to Marker")
     print("Turning 180")
-    turn(robot, log, 180,  power)
+    turn_old(robot, 180, 1,  power)
     print("Turned")
     print("Retracing Steps")
     retrace(robot, log, power)
@@ -84,4 +84,4 @@ def retrace(robot, log, power):
         try:
             turn_old(robot,action[0],action[1],action[2])
         except IndexError:
-            drive_old(action[0],action[1])
+            drive_old(robot, action[0],action[1])
