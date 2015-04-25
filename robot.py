@@ -31,7 +31,7 @@ def two_flag_code(robot, log, power):
 
 def test(robot, log, power):
     """A test function"""
-    drive_to_marker(robot, log, power)
+    stage_one(robot, log, power)
 
 test(R, log, 100)
 
