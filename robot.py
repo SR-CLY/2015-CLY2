@@ -43,5 +43,5 @@ def test(robot, log, power):
     stage_one(robot, log, power)
 
 
-stage_one(R, log, 100)
+three_flag_code(R, log, 100)
 
