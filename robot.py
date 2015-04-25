@@ -11,10 +11,15 @@ R = Robot()
 def stage_one(robot, log, power):
     """Moves forward to first marker, pushes into zone and then releases it"""
     drive(robot, log, 1, power)
+    sleep(0.1)
     release_marker(robot, power)
-    drive(robot, log, 2, power)
+    sleep(0.1)
+    drive(robot, log, 1, power)
+    sleep(0.1)
     drive_to_marker(robot, log, power)
+    sleep(0.1)
     turn_old(robot, 180, 1, power)
+    sleep(0.1)
     drive(robot, log, 2, power)
     print(log.retrace)
     
