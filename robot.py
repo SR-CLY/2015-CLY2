@@ -30,7 +30,7 @@ def two_flag_code(robot, log, power):
 
 def test(robot, log, power):
     """A test function"""
-    safety_code(robot, log, power)
+    two_flag_code(robot, log, power)
 
-test(R, log, 100)
+saftey_code(R, log, 100)
 
