@@ -8,12 +8,10 @@ RIGHT = 1
 
 """Contains functions for strategy"""
 	
-def drive_to_marker_hardcoded(robot, log, power):
+def drive_to_marker(robot, log, power):
     """Drives to nearest marker"""
     print("Drive to marker")
-    for i in range(2):
-        marker = find_flag(robot)
-        turn(robot, log, marker.rot_y, power)
+    marker = find_flag(robot)
     drive_to(robot, log, marker, power)
     
 def half_drive_to_marker(robot, log, power):
@@ -77,7 +75,7 @@ def wander(robot, log, power):
         print("Finished Loop 2")
         
     print("Driving to Marker")
-    drive_to_marker_hardcoded(robot, log, power)
+    drive_to_marker(robot, log, power)
     print("Driven to Marker")
     print("Turning 180")
     turn_old(robot, 180, 1,  power)
@@ -193,7 +191,7 @@ def wander_loop(robot, log, power):
                 print("No Marker Seen")
                 state = 1
             sleep(1)
-    drive_to_marker_hardcoded(robot, log, power)
+    drive_to_marker(robot, log, power)
     sleep(0.5)
     turn_old(robot, 180, 1,  power)
     sleep(0.5)
