@@ -48,5 +48,5 @@ def test(robot, log, power):
     find_flag(robot)
 
 
-test(R, log, 100)
+saftey_code(R, log, 100)
 
