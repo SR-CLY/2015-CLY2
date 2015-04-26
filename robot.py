@@ -21,7 +21,8 @@ def stage_one(robot, log, power):
     turn_old(robot, 200, 1, power)
     sleep(0.1)
     drive(robot, log, 4, power)
-    print(log.retrace)
+    actions = log.retrace
+    print(actions)
     
 def saftey_code(robot,log, power):
     """Hardcoded to drive first marker into wall"""
