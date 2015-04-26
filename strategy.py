@@ -14,6 +14,7 @@ def drive_to_marker(robot, log, power):
     marker = find_flag(robot)
     drive_to(robot, log, marker, power)
     
+    
 def half_drive_to_marker(robot, log, power):
     marker = find_flag(robot)
     half_drive_to(robot, log, marker, power)
@@ -38,6 +39,7 @@ def reverse_saftey_code(robot, log, power):
     print("Turn Completed")
     drive(robot, log, 4, power)
     sleep(1)
+
 
 def wander(robot, log, power):
     '''Drives into zone to the right'''
@@ -166,9 +168,11 @@ def carpet_test(robot, log, power):
     sleep(1)
     turn(robot, log, 90)
     
+    
 def drive_into_barrier(robot, log, power):
     turn(robot, log, 45)
     drive(robot, log, 5, power)
+    
     
 def retrace(robot, log, power):
     turn_old(robot, 180, 1, 50)
