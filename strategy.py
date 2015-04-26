@@ -3,6 +3,9 @@ from movement import *
 from vision import *
 from position import *
 
+LEFT = -1
+RIGHT = 1
+
 """Contains functions for strategy"""
 	
 def drive_to_marker(robot, log, power):
@@ -81,6 +84,37 @@ def wander(robot, log, power):
     retrace(robot, log, power)
     print("Steps Retraced, Program Terminating")
     
+    
+def search_marker(robot, increment, log, power):
+    Marker = False
+    print("Starting search")
+    state = 0
+    attempt = 1
+    while not Marker:
+        m = try_find_flag(robot)
+        try:
+            if m.info.marker_type == MARKER_FLAG:
+                Marker = True
+                print("Marker Seen")   
+        except:
+            if state == 0:
+                new_increment = increment * attempt
+                print("Right")
+                turn_old(robot, new_increment, RIGHT, power)
+                state = 1
+                attempt += 1
+                sleep(1)
+            else:
+                new_increment = increment * attempt
+                print("Left")
+                turn_old(robot, -new_increment, LEFT, power)
+                state = 0
+                attempt += 1
+                sleep(1)
+    print("Exited loop")
+    return m
+
+
 def wander_loop(robot, log, power):
     '''Drives into zone to the right'''
     drive(robot, log, 2, -100)
