@@ -41,7 +41,7 @@ def three_flag_code(robot, log, power):
 
 def test(robot, log, power):
     """A test function"""
-    turn_old(robot, 200, power)
+    turn(robot, log, 180, power)
 
 
 test(R, log, 100)
