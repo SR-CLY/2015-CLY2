@@ -8,10 +8,12 @@ RIGHT = 1
 
 """Contains functions for strategy"""
 	
-def drive_to_marker(robot, log, power):
+def drive_to_marker_hardcoded(robot, log, power):
     """Drives to nearest marker"""
     print("Drive to marker")
-    marker = find_flag(robot)
+    for i in range(2):
+        marker = find_flag(robot)
+        turn(robot, log, marker.rot_y, power)
     drive_to(robot, log, marker, power)
     
 def half_drive_to_marker(robot, log, power):
