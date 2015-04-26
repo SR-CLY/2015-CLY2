@@ -183,6 +183,3 @@ def retrace(robot, log, power):
             drive_old(robot, action[0],action[1])
 
             
-
-
-
