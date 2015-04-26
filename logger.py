@@ -19,6 +19,6 @@ class Logger():
         self.list_reversed = self.list[::-1]
         self.list = []
         return self.list_reversed
-        
+
     def clear(self):
         self.list = []
