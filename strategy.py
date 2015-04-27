@@ -76,6 +76,7 @@ def search_marker(robot, increment, log, power):
     print("Exited loop")
     return m
 
+	
 def carpet_test(robot, log, power):
     drive(robot, log, 4, power)
     sleep(1)
