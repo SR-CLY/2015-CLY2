@@ -35,9 +35,6 @@ def two_flag_code(robot, log, power):
     safety_code(robot,log,power)
     wander(robot, log, power)
 
-def three_flag_code(robot, log, power):
-    safety_code(robot, log, power)
-    wander_loop(robot, log, power)
 
 def test(robot, log, power):
     """A test function"""
