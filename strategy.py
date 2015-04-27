@@ -3,6 +3,8 @@ from movement import *
 from vision import *
 from position import *
 
+LEFT = -1
+RIGHT = 1
 
 """Contains functions for strategy"""
 	
