@@ -112,6 +112,12 @@ def drive_to(robot, log, marker, power=100):
     turn(robot, log, angle, power)
     drive_distance(robot, log, distance, power)
     
+def half_drive_to(robot, log, marker, power=100):
+    """Drives to a specified marker"""
+    distance = marker.centre.polar.length
+    angle = marker.centre.polar.rot_y
+    turn(robot, log, angle, power)
+    drive_distance(robot, log, distance, power)
 
 def drive_triangle(robot, marker, power=100):
     """Drives to a sepcified marker using triangles"""
