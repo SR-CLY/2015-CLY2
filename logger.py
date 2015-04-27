@@ -24,4 +24,4 @@ class Logger():
         if actions == 0:
             self.list = []
         else:
-            del self.list[-n:]
+            del self.list[-actions:]
