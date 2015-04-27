@@ -9,7 +9,7 @@ log = Logger()
 R = Robot()
 
 def stage_one(robot, log, power):
-    """Moves forward to first marker, pushes into zone and then releases it"""
+    """Moves forward to first marker, pushes into zone and then releases it then goes for middle"""
     drive(robot, log, 3, power)
     sleep(0.1)
     release_marker(robot, power)
