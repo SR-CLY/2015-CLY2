@@ -114,7 +114,7 @@ def drive_to(robot, log, marker, power=100):
     
 def half_drive_to(robot, log, marker, power=100):
     """Drives to a specified marker"""
-    distance = marker.centre.polar.length
+    distance = marker.centre.polar.length / 2
     angle = marker.centre.polar.rot_y
     turn(robot, log, angle, power)
     drive_distance(robot, log, distance, power)
