@@ -20,5 +20,8 @@ class Logger():
         self.list = []
         return self.list_reversed
 
-    def clear(self):
-        self.list = []
+    def clear(self, actions=0):
+        if actions == 0:
+            self.list = []
+        else:
+            del self.list[-n:]
