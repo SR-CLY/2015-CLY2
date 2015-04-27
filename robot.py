@@ -32,11 +32,11 @@ def safety_code(robot,log, power):
 
 def two_flag_code(robot, log, power):
     '''Safety_Code() and then Wander()'''
-    saftey_code(robot,log,power)
+    safety_code(robot,log,power)
     wander(robot, log, power)
 
 def three_flag_code(robot, log, power):
-    saftey_code(robot, log, power)
+    safety_code(robot, log, power)
     wander_loop(robot, log, power)
 
 def test(robot, log, power):
