@@ -24,7 +24,7 @@ def stage_one(robot, log, power):
     actions = log.retrace
     print(actions)
     
-def saftey_code(robot,log, power):
+def safety_code(robot,log, power):
     """Hardcoded to drive first marker into wall"""
     drive_distance(robot, log, 1, power)
     turn(robot, log, 45, power)
@@ -48,5 +48,5 @@ def test(robot, log, power):
     find_flag(robot)
 
 
-saftey_code(R, log, 100)
+safety_code(R, log, 100)
 

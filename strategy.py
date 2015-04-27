@@ -20,7 +20,7 @@ def half_drive_to_marker(robot, log, power):
     half_drive_to(robot, log, marker, power)
     
     
-def reverse_saftey_code(robot, log, power):
+def reverse_safety_code(robot, log, power):
     print("Driving backward")
     drive(robot, log, 2, -power)
     sleep(1)
@@ -43,7 +43,7 @@ def reverse_saftey_code(robot, log, power):
 
 def wander(robot, log, power):
     '''Drives into zone to the right'''
-    reverse_saftey_code(robot, log, power)
+    reverse_safety_code(robot, log, power)
     search_marker(robot, 15, log, power)
     drive_to_marker(robot, log, power)
     retrace(robot, log, power)
