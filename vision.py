@@ -13,6 +13,7 @@ def find_flag(robot):
             if m.info.marker_type == MARKER_FLAG:
                 return m
                 Marker = True
+ 
                 
 def try_find_flag(robot):
     """Tries to return a flag marker"""
