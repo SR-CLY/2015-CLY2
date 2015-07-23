@@ -8,7 +8,9 @@ Visit http://sr.sedders123.me for full documentation
 
 ## Credits
 Written by:
+
 James Seden Smith
+
 James Tait
 
 ## License
