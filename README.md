@@ -12,7 +12,3 @@ Written by:
 James Seden Smith
 
 James Tait
-
-## License
-
-TODO: Write license
