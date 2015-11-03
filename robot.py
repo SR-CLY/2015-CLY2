@@ -31,7 +31,7 @@ def safety_code(robot,log, power):
     drive(robot,log, 5, power)
 
 def two_flag_code(robot, log, power):
-    '''Safety_Code() and then Wander()'''
+    """Safety_Code() and then Wander()"""
     safety_code(robot,log,power)
     wander(robot, log, power)
 
