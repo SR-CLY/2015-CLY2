@@ -42,7 +42,7 @@ def reverse_safety_code(robot, log, power):
 
 
 def wander(robot, log, power):
-    '''Drives into zone to the right'''
+    """Drives into zone to the right"""
     reverse_safety_code(robot, log, power)
     search_marker(robot, 15, log, power)
     drive_to_marker(robot, log, power)
