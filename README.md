@@ -11,4 +11,4 @@ Written by:
 
 James Seden Smith (@sedders123)
 
-James Tait
+James Tait (@Taitenator)
