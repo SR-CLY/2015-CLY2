@@ -6,9 +6,9 @@ This is the code used by team CLY2 in the Student Robotics 2015 competition.
 
 Visit http://sr.sedders123.me for full documentation
 
-## Credits
+## Authors
 Written by:
 
-James Seden Smith
+James Seden Smith (@sedders123)
 
 James Tait
